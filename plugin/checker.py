@@ -1,5 +1,6 @@
-from BeautifulSoup import BeautifulSoup as bs
 import requests
 
-html = requests.get("http://codeforces.com/api/user.status?handle=YourHandle&from=1&count=1").json()['result']
-print html[0]['verdict']
+HANDLE = "your_handle_here"
+
+html = requests.get(f"http://codeforces.com/api/user.status?handle={HANDLE}&from=1&count=1").json()['result']
+print(html[0]['verdict'])

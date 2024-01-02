@@ -8,34 +8,15 @@ To install this plugin just run the following commands on your terminal:
 
 `cd ~/.vim/bundle`
 
-`git clone https://github.com/iamayushanand/CodeForce.vim.git`
+`git clone https://github.com/JustAnAverageGuy/codeforces_submitter.vim.git`
 
 ## Configuration
 
-You need to configure CF.vim present in the plugin/ dir based on your codeforces account settings etc.
+Configure the script by providing it with your handle, password and default LanguageId.
+To do so, hardcode the values in `lines 14, 15, 16` of `plugin/CF.vim`
 
-on line 30 replace "yourhandle" with Your Handle and on line 31 replace "YourPassword" with your codeforces password.On line 37 replace your User agent with the default.
-
-on line 46 replace 'depends on language' with your language code given in this README.
-Replace the location given in line 59 with your preferred one(That snippet is for debugging purposes).Replace the location given in line 71 with the location in which the file checker.py is present.
-
-Replace "YourHandle" in checker.py with your cf handle.
-
-## Language Codes
-
-|Language          |Language code|
-|------------------|-------------|
-|GNU GCC 5.1.0     |           10|
-|GNU GCC C11 5.1.0 |           43|
-|GNU G++ 5.1.0     |            1|
-|GNU G++11 5.1.0   |           42|
-|GNU G++14 6.2.0   |           50|
-|Microsoft visu C++|            2|
-|Haskell GHC 7.8   |           12|
-|Java 1.8.0        |           46|
-|Perl 5.20.1       |           13|
-|python 2.7.12     |            7|
-|python 3.5.2      |           31|
+Find language code for your preferred language in `language_codes.md`
+Add your handle in `plugin/checker.py` with your handle.
 
 ## Dependencies
 
@@ -43,23 +24,20 @@ You need to have python with beautiful soup and requests library installed.
 
 ## Usage 
 
-To submit a code for a specific cf problem use 
+NOTE:  the problem URL needs to be somewhere in the source code
 
-`:CodeForceSubmit XXXA`
+Calling 
 
-where XXXA is problem code.
+`:CodeForceSubmit`
+
+submits the problem.
+
+Note that depending on your network speed, it may take a few seconds to show you the confirmation. 
 
 To see your last verdict use
 
 `:LastVerdict`
 
-## Issues 
+## Notes
 
-If you find any problems or bug with my plugin please email me at iamayushanand@gmail.com 
-or open an issue on github page.
-
-## Self Promition
-
-If you like this plugin then follow me on github ;).
-
-
+The code is adapted from `github.com/KannaNeko/dew`.
