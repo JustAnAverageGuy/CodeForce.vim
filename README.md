@@ -14,6 +14,7 @@ To install this plugin just run the following commands on your terminal:
 
 Configure the script by providing it with your handle, password and default LanguageId.
 To do so, hardcode the values in `lines 14, 15, 16` of [plugin/CF.vim](plugin/CF.vim#L14)
+Also add the correct path to [checker.py](plugins/checker.py) at line [149 of CF.vim](plugin/CF.vim#149)
 
 Find language code for your preferred language in [language_codes.md](language_codes.md)
 Add your handle in [plugin/checker.py](plugin/checker.py)
